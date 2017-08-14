@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:gravity="center_vertical|center_horizontal"
+
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:padding="10dp"
+    tools:context="com.example.stocktake.MainActivity">
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/Button_Download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download File" />
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/Button_Import"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Import File" />
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/Button_Reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset Stocktake" />
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/Button_Scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan BarCode" />
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/Button_Upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload File" />
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/Button_Search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search" />
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/Button_Setup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Setup" />
+</LinearLayout>

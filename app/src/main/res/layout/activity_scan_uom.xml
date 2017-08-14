@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:id="@+id/scanuom_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="200dp"
+    android:padding="10dp"
+    android:paddingBottom="30dp"
+    android:paddingTop="30dp">
+    <LinearLayout
+        android:background="#9D9D9D"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/LocationTxt"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:layout_weight="2"
+            android:text="BinLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:textSize="18sp"/>
+
+        <Spinner
+            android:gravity="center_vertical"
+            android:id="@+id/binSpin"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:maxLines="1"
+            android:hint="BarCode"
+            android:textColorHint="#000000"
+            android:id="@+id/barcodeEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:maxLines="1"
+            android:hint="ProductCode"
+            android:textColorHint="#000000"
+            android:id="@+id/productcodeEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <Button
+            android:textSize="18sp"
+            android:id="@+id/minus"
+            android:text="-"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="minus_onClick_Event"/>
+
+        <EditText
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_horizontal"
+            android:layout_weight="5"
+            android:digits="1234567890\n"
+            android:singleLine="true"
+            android:hint="Quantity"
+            android:textColorHint="#CC0000"
+            android:id="@+id/countEdt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:textSize="18sp"
+            android:id="@+id/plus"
+            android:text="+"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="plus_onClick_Event"/>
+
+        <Button
+            android:textSize="18sp"
+            android:id="@+id/Multi"
+            android:text="M"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="Multi_onClick_Event"/>
+
+        <CheckBox
+            android:layout_weight="4"
+            android:layout_marginLeft="24dp"
+            android:id="@+id/negative"
+            android:text="negative"
+            android:checked="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pre_detail_linearlayout"
+        android:background="#ADD8E6"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="Barcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/pre_barcodeTxt"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="ProductCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/pre_productTxt"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="Description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/pre_discriptionTxt"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="QtyInStock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/pre_quantityTxt"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="Total Counted"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/pre_countTxt"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/scan"
+            android:text="Save"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="scan_onClick_Event"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detail_linearlayout"
+        android:background="#ADD8E6"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="Barcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/barcodeTxt"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="ProductCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/productTxt"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="Description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/discriptionTxt"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="QtyInStock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/quantityTxt"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="Total Counted"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/countTxt"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
